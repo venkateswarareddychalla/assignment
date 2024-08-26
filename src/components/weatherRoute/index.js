@@ -6,7 +6,6 @@ import { WiCloudyWindy } from "react-icons/wi";
 import { TbStackPush } from "react-icons/tb";
 import { CgCodeClimate } from "react-icons/cg";
 import Loader from "react-loader-spinner";
-import { MdOutlineLocationOff } from "react-icons/md";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./index.css";
@@ -189,7 +188,11 @@ function Weather() {
   const renderFailureView = () => {
     return (
       <div className="failure-container">
-        <MdOutlineLocationOff size={100} />
+        <img
+          src="https://res.cloudinary.com/dykjwqjqi/image/upload/v1724659897/zxfl7wecke90rnyqj0fs.png"
+          alt="error"
+          className="error-image"
+        />
         <h1 className="failure-heading">Sorry, City Not Found!</h1>
         <p className="failure-para">
           The city name you provided does not match any known locations.
@@ -202,7 +205,7 @@ function Weather() {
   const renderLoaderView = () => {
     return (
       <div className="loader-container">
-        <Loader type="ThreeDots" size={30} color="white" />
+        <Loader type="ThreeDots" size={30} color="#00CCFF" />
       </div>
     );
   };
@@ -248,7 +251,7 @@ function Weather() {
       {weatherShown && (
         <div className="initial-container">
           <img
-            src="https://ik.imagekit.io/0e6zfqnlk/weather-new_S-M5HuHtx?updatedAt=1724562430417"
+            src="https://res.cloudinary.com/dykjwqjqi/image/upload/v1724657112/iew9l4drcbmwtexmlovy.png"
             alt="weather"
             className="initial-weather-image"
           />
